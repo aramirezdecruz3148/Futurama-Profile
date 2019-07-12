@@ -1,0 +1,36 @@
+{
+  "name": "Futurama-Profile",
+  "version": "1.0.0",
+  "description": "Futurama Profile creates a user profile based on their favorite Futurama character. The profile includes a tagline, which is a quote by the users favorite character.",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
+    "test": "jest --verbose --runInBand",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aramirezdecruz3148/Futurama-Profile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aramirezdecruz3148/Futurama-Profile/issues"
+  },
+  "homepage": "https://github.com/aramirezdecruz3148/Futurama-Profile#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
