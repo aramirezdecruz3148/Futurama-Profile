@@ -26,4 +26,17 @@ describe('futurama routes', () => {
         }]);
       });
   });
+
+  it('GET can get an item by index', () => {
+    return request(app)
+      .get('/api/v1/profiles/0')
+      .then(res => {
+        expect(res.body).toEqual({ 
+          name: 'Alex',
+          favoriteCharacter: 'Bender',
+          tagline: expect.any(String) 
+        });
+      });
+  });
+
 });
