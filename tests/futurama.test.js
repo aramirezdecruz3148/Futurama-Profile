@@ -39,4 +39,17 @@ describe('futurama routes', () => {
       });
   });
 
+  it('PATCH can update favorite character', () => {
+    return request(app)
+      .patch('/api/v1/profiles/0')
+      .send({ favoriteCharacter: 'Fry' })
+      .then(res => {
+        expect(res.body).toEqual({ 
+          name: 'Alex',
+          favoriteCharacter: 'Fry',
+          tagline: expect.any(String) 
+        });
+      });
+  });
+
 });
