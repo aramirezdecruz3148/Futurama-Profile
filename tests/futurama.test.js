@@ -52,4 +52,15 @@ describe('futurama routes', () => {
       });
   });
 
+  it('can delete an item by index', () => {
+    return request(app)
+      .delete('/api/v1/profiles/0')
+      .then(res => {
+        expect(res.body).toEqual({
+          name: 'Alex',
+          favoriteCharacter: 'Fry',
+          tagline: expect.any(String)
+        });
+      });
+  });
 });
